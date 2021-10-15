@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM02PG02.Views.UpdatePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="ID" Grid.Row="0" Grid.Column="0"></Label>                <Entry x:Name="txtid" Placeholder="Ingrese su ID" Keyboard="Numeric" Grid.Row="0" Grid.Column="1" Text="{Binding codigo}" IsReadOnly="True"></Entry>
+
+                <Label Text="Nombre" Grid.Row="1" Grid.Column="0"></Label>                <Entry x:Name="txtnomb" Placeholder="Ingrese su Nombre" Grid.Row="1" Grid.Column="1" Text="{Binding nombre}"></Entry>                <Label Text="Apellido" Grid.Row="2" Grid.Column="0"></Label>                <Entry x:Name="txtapellido" Placeholder="Ingrese su Apellido" Grid.Row="2" Grid.Column="1" Text="{Binding apellido}"></Entry>                <Label Text="Edad" Grid.Row="3" Grid.Column="0"></Label>                <Entry x:Name="txtedad" Placeholder="Ingrese su Edad" Keyboard="Text" Grid.Row="3" Grid.Column="1" Text="{Binding edad}"></Entry>                <Label Text="Direccion" Grid.Row="4" Grid.Column="0"></Label>                <Editor x:Name="txtdireccion" Placeholder="Ingrese su Direccion" Keyboard="Email" Grid.Row="4" Grid.Column="1"  Text="{Binding direccion}"/>                <Label Text="Correo" Grid.Row="5" Grid.Column="0"></Label>                <Entry x:Name="txtcorreo" Placeholder="Ingrese su Correo" Grid.Row="5" Grid.Column="1" Text="{Binding email}"/>
+
+                <Button x:Name="btnactualizar" Text="Actualizar Persona" Clicked="btnactualizar_Clicked"  Grid.Row="6" Grid.Column="0"></Button>
+                <Button x:Name="btneliminar" Text="Eliminar Persona" Clicked="btneliminar_Clicked"  Grid.Row="6" Grid.Column="1"></Button>
+                
+
+            </Grid>
+            
+           
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

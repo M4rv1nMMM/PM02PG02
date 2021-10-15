@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM02PG02.MainPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Agregar Persona"
+                     Clicked="ToolbarItem_Clicked"
+                     x:Name="toolbar01"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <ListView x:Name="lspersonas" ItemTapped="lspersonas_ItemTapped">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="{Binding codigo}" Grid.Row="0" Grid.Column="0" TextColor="Blue"></Label>
+                        <Label Text="{Binding nombre}" Grid.Row="0" Grid.Column="1" TextColor="Blue"></Label>
+                        <Label Text="{Binding apellido}" Grid.Row="0" Grid.Column="2" TextColor="Blue"></Label>
+                        <Label Text="{Binding edad}" Grid.Row="0" Grid.Column="3" TextColor="Blue"></Label>
+                        <Label Text="{Binding direccion}" Grid.Row="0" Grid.Column="4" TextColor="Blue"></Label>
+                        <Label Text="{Binding email}" Grid.Row="0" Grid.Column="5" TextColor="Blue"></Label>
+                        
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        
+    </ListView>
+
+
+</ContentPage>
